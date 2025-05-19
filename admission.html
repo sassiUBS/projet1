@@ -1,0 +1,97 @@
+<!-- page plus d'informations:modifier le contenu et le style par JS(adresse)-->
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<title>TP 1</title>
+<!-- insérer le Favicon -->
+<link rel="shortcut icon" href="icone ensibs.jpg" type="image/x-icon">  
+<!--ajouter un formulaire à une image --> 
+<link rel="stylesheet" href="stylepage1.css">
+</head>
+<body> 
+  <a href="page1.html"><img src="Logo.JPG" width="250" height="180" alt="Logo"></a>
+  <div class="container_informations">
+    
+<!--ajouter un cadre en ligne.-->
+<!-- iframe : afficher une page Web dans une page Web-->
+<h2>Plus d'informations</h2> 
+<iframe src="https://www-ensibs.univ-ubs.fr/fr/index.html" 
+  height="300px" width="100%" id="Iframe_ENSIBS"></iframe>
+  <h3>Découvrir plus d'informations sut notre site:  <a href="https://www-ensibs.univ-ubs.fr/fr/formations/formations-d-ingenieurs/
+    genie-industriel-4-0.html" target="iframe_GI" id="Iframe_ENSIBS_a">ensibs.fr</a></h3>
+<!--modifier le contenu et le style par JS-->
+<h2>Nous contacter</h2>
+<h3 id="MyfooterJS2">Retrouver nous sur notre site de Lorient.</h3>
+  <script>
+  function myFunction() {
+    document.getElementById("MyfooterJS2").style.fontSize = "35px"; 
+    document.getElementById("MyfooterJS2").style.color = "black";
+    document.getElementById("MyfooterJS2").style.backgroundColor = "#2980b9";  
+    document.getElementById("MyfooterJS2").innerHTML =
+    "Adresse: 17 Bd Flandres Dunkerque 1940, 56100 Lorient";
+  }
+  function afficher() {
+    const contact = document.getElementById("coordonnées");
+    contact.innerHTML = `
+      <nav>
+        <ul>
+          <li><img src="telephone.png" width="15" height="15"> Téléphone : 07 59 54 24 97</li>
+          <li><img src="arroba.png" width="15" height="15"> Email : Toavina.rakotoarinoro@gmail.com</li>
+          <li><img src="cartes-et-drapeaux.png" width="15" height="15"> Adresse : 17 Bd Flandres Dunkerque 1940, 56100 Lorient</li>
+          <li><img src="code postale.png" width="15" height="15"> Code postal : 56100, Lorient</li>
+        </ul>
+      </nav>
+    `;
+  }
+  </script>
+  <button type="button" onclick="myFunction()" id="button-myfooter">Retrouvez nous!</button>
+</div>
+
+
+        <div class="formulaire">
+            <h2> Prendre Rendez-vous </h2>
+            <form id="contact-form" onsubmit="handleSubmit(event)">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required><br><br>
+        
+                <label for="prenom">Prénom : </label>
+                <input type="text" id="prenom" name="prenom" required><br><br>
+        
+                <label for="email">Email : </label>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="date">Date de Rendez-vous : </label>
+                <input type="date" id="date" name="date" ><br><br>
+        
+                <label for="Motif"> Motif de la rencontre : </label>
+                <select id="Motif" name="Motif" required>
+                    <option value="Bar"> Boire</option>
+                    <option value="Basket"> Basket </option>
+                    <option value="Bagarre"> Se bagarrer </option>
+                    <option value="Informations"> Informations</option>
+                </select>
+                <br><br>
+        
+                <p> Que préferez-vous : </p>
+                <div class="input-group">
+                    <input type="radio" id="matin" name="horaire" value="matin">
+                    <label for="matin">Matinée</label>
+                  </div>
+                  
+                  <div class="input-group">
+                    <input type="radio" id="apresmidi" name="horaire" value="apresmidi">
+                    <label for="apresmidi">Après-midi</label>
+                  </div>
+                  
+        
+                <label for="demande"> Un message à transmettre avant la rencontre : </label><br>
+                <textarea id="demande" name="demande" rows="4" cols="50"> </textarea><br><br>
+        
+                <!-- Bouton de soumission-->
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+</body> 
+</html>
+

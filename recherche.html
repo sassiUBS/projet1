@@ -1,0 +1,24 @@
+<!--pade de recherche javascript: formulaire recherche-->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Recherchejavascript</title>
+        <script src="recherche.js" defer></script> <!--defer : force l'éxecution-->
+    </head>
+    <body>
+        <!--Lien vers la page1-->
+        <a href="apprentissage.html"><img src="logoGI.jpg" width="250" height="180" alt="Logo"></a>
+        <h1>Moteur de recherche</h1>
+
+        <!--Formulaire de recherche-->
+        <form id="formulairerechercheJS">
+            <!--Champ de saisie pour le mot clé-->
+            <input type="text" id="recherche mot" placeholder="Entrez un mot-clé" required>
+            <!-- placeholder: texte indicatif dans le champ de saisi; required : champ obligatoire-->
+            <!--Bouton de soumission-->
+            <button type="submit">Recherche</button>
+        </form>
+        <!--Div pour afficher les résultats de la recherche-->
+        <div id="resultas"></div>
+    </body>
+</html>

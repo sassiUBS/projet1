@@ -1,0 +1,139 @@
+<!--page média-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- adapter la page aux écrans de différentes tailles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <!--insérer la Favicon-->
+    <link rel="shortcut icon" href="ENSIBS.png" type="image/x-icon">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            font-family: 'Verdana';
+            color: #333333;
+            background-color: whitesmoke;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header, .footer {
+            background-color: #2a9df4;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex: 2;
+            margin: 20px;
+            border-radius: 8px;
+            background-color: white;
+        }
+        .menu, .main, .right{
+            padding: 20px;
+        }
+        .menu{
+            width: 25%;
+            background-color: #d0e7ff;
+            border-right: 1px solid #b0c4de;
+        }
+        .menu a{
+            background-color: #2a9df4;
+            padding: 10px;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .main a:hover{
+            background-color: #1c7dcf;
+        }
+        .main{
+            width: 50%;
+            padding: 0 20px;
+        }
+        .right{
+            width: 25%;
+            background-color: #d0e7ff;
+            border-left: 1px solid #b0c4de;
+        }
+        h2{
+            color: #2a9df4;
+            margin-bottom: 10px;
+        }
+        p{
+            line-height: 1.6;/*hauteur entre h2 et p*/
+        }
+    @media (max-width: 600px){
+            .container{
+                flex-direction: column;
+            }
+            .menu, .main, .right{
+                width: 100%;
+                padding: 15px 0;
+                border-radius: 0;
+            }
+            .menu{
+                border-right: none;
+                border-bottom: 1px solid #b0c4de;
+            }
+            .right{
+                border-right: none;
+                border-top: 1px solid #b0c4de;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="header">
+    <h1>Université Bretagne Sud</h1>
+   </div>
+   <div class="container">
+        <div class="menu">
+            
+            <a href="https://www-facultedseg.univ-ubs.fr/fr/index.html">Faculté Droit Éco-Gestion et IAE</a>
+            <a href="https://www-facultellshs.univ-ubs.fr/fr/index.html">Faculté Lettre, Langues, Sciences Humaines & Sociales</a>
+            <a href="https://www-facultesciences.univ-ubs.fr/fr/index.html">Faculté Sciences & Sciences de l'Ingénieur</a>
+            <a href="ensibs.html">ENSIBS - École d'Ingénieur</a>
+            <a href="https://www.iutvannes.fr/">IUT Vannes</a>
+            <a href="formulaire.html">Prise de contact</a>
+        </div>
+        <div class="main">
+            <h2>Présentation</h2>
+            <p>Université entreprenante et engagée, l’UBS développe 4 grandes priorités : Mer & littoraux, Industrie du futur, Environnement, santé & handicap, <br>
+                Cyber & 
+                Intelligence des données. A taille humaine, l'Université Bretagne Sud compte 3 campus : <br>Lorient, Vannes et Pontivy et 
+                s’appuie sur la compétence de ses 987 personnels dont 500 enseignants et enseignants-chercheurs pour former chaque année 10 800 étudiants.
+                <br>
+                <br></p>
+            <h2>Une université plurielle</h2>
+                <p>Unique université publique en Morbihan, elle est la seule à offrir, un éventail aussi étendu de programmes d'études, <br>allant du B.U.T. au doctorat, en passant par le diplôme d’ingénieur.
+                L'Université Bretagne Sud doit sa croissance et <br>son rayonnement à une tradition d'innovation et de proximité avec ses partenaires qui ne cesse d'animer son action.
+                <br>Elle compte 3 facultés, 2 IUT, 1 École d'Ingénieurs et 1 IAE.
+                Elle compte 3 Facultés : la Faculté Droit, Sciences Économiques <br>& Gestion à Vannes, la Faculté Lettres, Langues, Sciences Humaines & Sociales à Lorient et la Faculté Sciences & Sciences de l’Ingénieur à Vannes et Lorient. 
+                <br>Chacun de nos campus dispose d’un Institut Universitaire de Technologie (IUT). 
+                L’IUT de Vannes forme avant tout avant aux métiers de l’informatique, <br>de la statistique, du commerce, de la gestion et de la comptabilité des entreprises. L’IUT de Lorient-Pontivy, prépare notamment aux métiers de l’environnement, 
+                <br>du génie thermique, chimique, et de la logistique.
+                L’École d’Ingénieurs ENSIBS, forme près de 300 élèves-ingénieurs autour de 4 spécialités : l’informatique <br>et la cyberdéfense à Vannes, le génie industriel et la mécatronique à Lorient.
+                L'IAE Bretagne Sud se situe à Vannes et forme les managers et les économistes de demain.
+            </p>
+        </div>
+        <div class="right">
+            <h2>Approche pédagogique</h2>
+            <p>Nos objectifs pédagogiques à l'Université Bretagne Sud  sont de développer les connaissances <br>académiques de nos étudiants,
+                 mais aussi leurs intelligences sociale, citoyenne, pratique et technologique.
+                <br>L'UBS s'attache à une exigence intellectuelle, sanctionnée par des diplômes reconnus par<br> l’État ;
+                 une pratique de terrain, par le projet et l’entrepreneuriat ; et le développement <br>personnel (travailler en équipe, acquérir un comportement inclusif, 
+                 apprendre à interagir dans <br>différentes cultures, identifier ses émotions, etc.), qui passe par de la médiation et <br>les travaux de groupe. Selon le palmarès publié par l'Etudiant, 
+                 l’Université se classe 16ème parmi les 80 <br>universités françaises pour la réussite de la Licence en 3 ans.</p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy;copyright GI3
+    </div>
+</body>
+</html>

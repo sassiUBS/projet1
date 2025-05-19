@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="../CSS/Form.css">
+    <script src="../JavaScript/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="../HTML/Index.html">
+            <img src="../Pictures/logoENSIBS.png" alt="Logo ENSIBS">
+        </a>
+    </header>
+
+    <h1>Formulaire de prise de contact</h1>
+<style>
+body {
+    font-family: Arial;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Styles pour le formulaire */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Styles pour les labels */
+label {
+    display: block;/* Définir l'élément comme un bloc, prenant toute la largeur disponible */
+    margin-bottom: 8px;/* Ajouter un espace de 8 pixels en bas de l'élément */
+    font-weight: bold;/*  texte en gras */
+    color: #555;
+}
+
+/* Styles pour les champs de texte et autres éléments de formulaire */
+/* Appliquer les styles aux champs de texte, email, date, select et textarea */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 20px);/* la largeur: 100% du conteneur parent moins 20 pixels */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Styles pour les boutons radio et les cases à cocher */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;/*marge à droite des boutons radio et des cases à cocher */
+}
+/* styles aux étiquettes  après les boutons radio et les cases à cocher */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;/*texte aligné avec le bouton*/
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+/* Styles pour le bouton de soumission */
+input[type="submit"] {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+
+</style>
+
+    <h1>Formulaire prise de contact</h1>
+    <form id="contact-form" action="traitement.php" method="POST">
+        <!-- Champ de texte -->
+        <label for="nom">Nom : </label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom : </label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <!-- Champ d'email -->
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Champ de date -->
+        <label for="date">Date de naissance : </label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <!-- Case à choisir -->
+        <label for="formations">Formations souhaitées à l'ENSIBS : </label>
+        <select id="formations" name="formations" required>
+            <option value="Cyberdéfense">Cyberdéfense</option>
+            <option value="Énergies, Hydrogène">Énergies, Hydrogène</option>
+            <option value="Génie civil 4.0">Génie civil 4.0</option>
+            <option value="Génie industriel 4.0">Génie industriel 4.0</option>
+            <option value="Informatique et Cybersécurité">Informatique et Cybersécurité</option>
+            <option value="Mécatronique">Mécatronique</option>
+        </select>
+        <br><br>
+
+        <!-- Boutons radio -->
+        <p>Actuellement, vous êtes :</p>
+        <input type="radio" id="1ere" name="annee" value="1ere" required>
+        <label for="1ere">en 1ère</label><br><br>
+
+        <input type="radio" id="terminale" name="annee" value="terminale">
+        <label for="terminale">en terminale</label><br><br>
+
+        <input type="radio" id="IUT" name="annee" value="IUT">
+        <label for="IUT">en IUT</label><br><br>
+
+        <input type="radio" id="licence" name="annee" value="licence">
+        <label for="licence">en licence</label><br><br>
+
+        <input type="radio" id="master" name="annee" value="master">
+        <label for="master">en master</label><br><br>
+
+        <input type="radio" id="reprise" name="annee" value="reprise">
+        <label for="reprise">en reprise d'études</label><br><br>
+
+        <input type="radio" id="autre" name="annee" value="autre">
+        <label for="autre">autre</label><br><br>
+
+        <!-- Cases à cocher -->
+        <p>Langues parlées :</p>
+        <input type="checkbox" id="francais" name="langues[]" value="francais">
+<label for="francais">Français</label><br><br>
+
+<input type="checkbox" id="anglais" name="langues[]" value="anglais">
+<label for="anglais">Anglais</label><br><br>
+
+<input type="checkbox" id="espagnol" name="langues[]" value="espagnol">
+<label for="espagnol">Espagnol</label><br><br>
+        <!-- Zone de texte -->
+        <label for="demande">Vous avez une demande spécifique à formuler :</label><br>
+        <textarea id="demande" name="demande" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Bouton de soumission -->
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
+

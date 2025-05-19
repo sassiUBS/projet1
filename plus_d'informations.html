@@ -1,0 +1,42 @@
+<!--page plus d'informations-->
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="stylepage1.css">
+<script src="cérémonie.js"></script>
+    <body>
+    <a href="apprentissage.html"><img src="logoGI.jpg" width=250px height=180px alt=""></a>
+    <div class="container_informations">
+        <!--page plus d'informations: ajouter un cadre en ligne-->
+        <!--iframe : afficher une page web dans une page web-->
+        <h2>Plus d'informations</h2>
+        <iframe src="https://www-ensibs.univ-ubs.fr/fr/index.html" height="300px"width="100%" id="Iframe_ENSIBS"></iframe>
+        <h3>Découvrir plus d'informations sur notre site: <a href="https://www-ensibs.univ-ubs.fr/fr/formations/formations-d-ingenieurs/genie-industriel-4-0.html" 
+        target="iframe_GI" id="Iframe_ENSIBS_a">ensibs.fr</a></h2>
+    
+    
+        <!--modifier le contenu et le style par JS-->
+    <h2>Nous contacter</h2>
+    <h3 id="MyfooterJS2">Retrouver nous sur notre site de Lorient.</h3>
+            <script>
+                function myFunction(){
+                    document.getElementById("MyfooterJS2").style.fontSize="35px";
+                    document.getElementById("MyfooterJS2").style.color="black";
+                    document.getElementById("MyfooterJS2").style.backgroundColor="#2980b9";
+                    document.getElementById("MyfooterJS2").innerHTML="Adresse : 17 Bd Flandres Dunkerque 1940, 56100 Lorient";
+                }
+            </script>
+            <button type="button" onclick="myFunction()" id="button-myfooter">Retrouvez nous!</button>
+
+            <!--Affichagae de la date et de l'heure par JS-->
+            <h2>Dernière consultation</h2>
+            <button type="button" id="button-myfooter-information" 
+            onclick="document.getElementById('consultation').innerHTML =
+            new Date().toLocaleString('fr-FR', {weekday : 'long', year:'numeric', month:'long', day:'numeric', hour:'2-digit', 
+            minute:'2-digit',second:'2-digit'})">
+            <!--toLocaleString permet d'afficher la date sous forme de chaine de caractère-->
+            Cliquer ici.
+            </button>
+            <p id="consultation"></p>
+    </div>
+</body>
+</html>
